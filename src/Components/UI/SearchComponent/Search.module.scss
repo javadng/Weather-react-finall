@@ -1,0 +1,47 @@
+@import '../../utilities/variables';
+
+.form {
+  position: relative;
+}
+
+.header {
+  &__search {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+    transition: all 0.3s;
+    border-radius: 1rem 0 0 1rem;
+
+    @media only screen and (min-width: $bp-md) {
+      width: 100%;
+    }
+
+    &:focus {
+      box-shadow: 2px 11px 0.7rem rgb(241 237 237 / 25%);
+      transform: translateY(-0.5rem);
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    transition: all 0.3s;
+    position: absolute;
+    right: 10%;
+    top: 8px;
+    border-radius: 0 1rem 1rem 0;
+
+    @media only screen and (min-width: $bp-md) {
+      top: 10px;
+      right: 0;
+    }
+
+    @media only screen and (min-width: $bp-lg) {
+      top: 13px;
+    }
+  }
+}
+
+.header__search:focus ~ .header__btn {
+  transform: translateY(-0.5rem);
+}

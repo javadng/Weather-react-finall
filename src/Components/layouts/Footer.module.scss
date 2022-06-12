@@ -1,0 +1,47 @@
+@import '../utilities/variables';
+
+.footer {
+  grid-row: 3 / -1;
+
+  background-color: $PrimaryDark;
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 2rem;
+  margin-top: 7rem;
+
+  @media screen and (min-width: $bp-md) {
+    margin-top: 15rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 10rem)) 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-gap: 3rem;
+  }
+
+  &__menu {
+    grid-row: 1 / 2;
+  }
+
+  &__contact {
+    grid-row: 2 / 3;
+  }
+
+  &__desc {
+    grid-column: 1 / -1;
+    text-align: justify;
+    @media only screen and (min-width: $bp-md) {
+      grid-column: 3 / 4;
+      padding: 0 3rem;
+    }
+  }
+
+  &__desc,
+  &__menu,
+  &__contact {
+    @media screen and (min-width: $bp-md) {
+      grid-row: 1 / 2;
+    }
+  }
+}

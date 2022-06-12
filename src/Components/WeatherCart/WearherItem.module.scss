@@ -1,0 +1,16 @@
+.weather__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.weather__item {
+  display: flex;
+  align-items: center;
+}
+
+.weather__img {
+  display: inline-block;
+  margin: 0 1rem;
+}

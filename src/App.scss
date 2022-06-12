@@ -1,0 +1,8 @@
+.container-grid {
+  display: grid;
+  grid-template-rows: max-content calc(95vh - 6rem) max-content;
+}
+
+li {
+  list-style-type: none;
+}
